@@ -7,25 +7,41 @@
 var React = require('react-native');
 var {
   AppRegistry,
+  NavigatorIOS,
   StyleSheet,
   Text,
   View,
+  Image,
+  ActivityIndicatorIOS
 } = React;
 
 var ReactFeed = React.createClass({
   render: function() {
     return (
       <View style={styles.container}>
+        <Image
+            style={styles.logo}
+            source={{uri: 'https://avatars3.githubusercontent.com/u/572096?v=3&s=460'}}
+        />
         <Text style={styles.welcome}>
-          Welcome to React Native!
+          Say meow :3
         </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
+        <ActivityIndicatorIOS
+            size="large"
+            color="#0000ff"
+        />
+        <ActivityIndicatorIOS
+            size="large"
+            color="#aa00aa"
+        />
+        <ActivityIndicatorIOS
+            size="large"
+            color="#aa3300"
+        />
+        <ActivityIndicatorIOS
+            size="large"
+            color="#00aa00"
+        />
       </View>
     );
   }
@@ -48,6 +64,11 @@ var styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
+  logo: {
+    width: 100,
+    height: 100,
+    backgroundColor: 'red'
+  }
 });
 
 AppRegistry.registerComponent('ReactFeed', () => ReactFeed);
